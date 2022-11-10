@@ -1,0 +1,45 @@
+body{
+    background-image: url('images/bg3.png');
+    position:relative;
+    background-position:center;
+    opacity: 2;
+    background-size:cover;
+    background-repeat:no-repeat;
+    min-height: 100%;
+    
+}
+
+#logo{
+    background-image: url('images/ddLogo.png');
+}
+
+h3{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    -webkit-text-fill-color: rgb(36, 132, 198 );
+
+}
+
+#ques{
+    background-color:black;
+    
+}
+
+#hlo{
+    background-color:black ;
+}
+
+.form-select{
+    color: grey;
+}
+
+.form-check{
+    color: grey;
+}
+
+.smoke{
+    color: grey;
+}

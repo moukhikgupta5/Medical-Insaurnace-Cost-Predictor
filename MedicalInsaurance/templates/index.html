@@ -1,0 +1,132 @@
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <!-- Bootstrap Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+        <!-- linking the CSS stylesheet  -->
+        <link rel="stylesheet" href="{{ url_for('static',filename='form.css') }}">
+        
+
+        <!-- linking our sass file -->
+        <!-- <link rel="stylesheet" href="/css/main.min.css"> -->
+    
+        <title>Medical Insurance Cost Predictor</title>
+    
+    </head>
+
+    <body>
+        
+
+        <div id="intro">
+
+       
+        <div class="container-lg my-3">
+            
+            <div class="row">
+                
+                <div class="col-sm-2 col-lg-6">
+                   
+                    <div id="ques" class="card mb-1 mt-1 ms-5 ps-4 pe-4 pt-3 pb-1 shadow-lg  bg-body rounded" style="width: 25rem;">
+                             <h2>Medical Insurance Cost Predictor</h2><br><h3>Your Details</h3>
+                   
+                    <form  action ="/predict" method="post">
+                        
+                        <div class="form-group">
+
+                          <!-- <label for="Age ">Age :</label> -->
+                          <input type="number" min="0" class="form-control" id="Age " name="age" placeholder="Enter Age ">
+                        </div><br>
+
+                        <div class="form-group">
+                            <!-- <label for="BMI ">BMI :</label> -->
+                            <input type="text" class="form-control" id="BMI " name="bmi" placeholder="Enter your Body Mass Index ">
+                          </div><br>
+
+                          <div>
+                            <!-- <label for="Sex ">Sex :</label> -->
+                            <select class="form-select" aria-label="select sex" name="gender">
+                            <option selected>Enter your gender</option>
+                            <option value=0>Male</option>
+                            <option value=1>Female</option>
+                          </select></div><br>
+
+                          
+                          
+                          <div class="smoke">
+                            <label for="smoker ">Are you a smoker :</label>
+
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="smoker" id="Radios1" value=0 checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                              No
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="smoker" id="Radios2" value=1>
+                            <label class="form-check-label" for="exampleRadios2">
+                              Yes
+                            </label>
+                          </div>
+                          </div><br>
+                          
+                          <div class="form-group">
+                            <!-- <label for="nochild">Number of Children :</label> -->
+                            <input type="number" min="0" class="form-control" id="nochild" name="children" aria-describedby="nochild" placeholder="Enter the no. of children you have">
+                          </div><br>
+
+                          <div>
+                            <!-- <label for="Region ">Region :</label> -->
+                            <select class="form-select" aria-label="select sex" name="region">
+                            <option selected name="region" value=99>Enter the region of your residence </option>
+                            <option value=1 name="region">SouthWest</option>
+                            <option value=0 name="region">SouthEast</option>
+                            <option value=3 name="region">NorthWest</option>
+                            <option value=2 name="region">NorthEast</option>
+                          </select></div><br>
+                
+                        <div class="text-center">          
+                        <button type="submit" class="btn btn-outline-primary m-2 text" value="submit">Submit</button>
+                        </div>
+                       
+                          
+                        </div>
+                      </form>
+                      
+               
+
+                    </div>
+               
+
+                </div>
+               
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+     
+    
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
+        
+    </body>
+    </html>
