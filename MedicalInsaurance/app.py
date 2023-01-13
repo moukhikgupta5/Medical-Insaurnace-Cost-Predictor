@@ -4,7 +4,8 @@ import pickle#Initialize the flask App
 app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
 print(model.predict([np.asarray((31,1,25.74,0,1,0))]))
-
+#flask run
+# python -m flask
 # age sex(m0 f1) bmi children smoker region 'southeast':0,'southwest':1,'northeast':2,'northwest':3
 
 # default page of our web-app
